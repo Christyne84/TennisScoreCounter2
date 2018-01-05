@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">Tennis Score Counter</string>
+    <string name="halep">Simona Halep</string>
+    <string name="sharapova_plus_one">+1</string>
+    <string name="sharapova_plus_two">+2</string>
+    <string name="halep_plus_one">+1</string>
+    <string name="halep_plus_two">+2</string>
+    <string name="winner">Winner</string>
+    <string name="reset_score">Reset</string>
+    <string name="sharapova">Maria Sharapova</string>
+    <string name="points">Points</string>
+    <string name="games">Games</string>
+    <string name="sets">Sets</string>
+    <string name="points_sharapova">0</string>
+    <string name="points_halep">0</string>
+    <string name="games_sharapova">0</string>
+    <string name="games_halep">0</string>
+    <string name="sets_sharapova">0</string>
+    <string name="sets_halep">0</string>
+    <string name="serves_won_sharapova">Points</string>
+    <string name="serves_won_halep">Points</string>
+    <string name="winner_image">-</string>
+    <string name="winner_image_description">winner image description</string>
+    <string name="winner_text_label">The Winner is</string>
+    <string name="points_sharapova_label">Points</string>
+    <string name="points_halep_label">Points</string>
+    <string name="games_sharapova_label">Games</string>
+    <string name="games_halep_label">Games</string>
+    <string name="sets_sharapova_label">Sets</string>
+    <string name="sets_halep_label">Sets</string>
+    <string name="n_a">N/A</string>
+    <string name="todo">TODO</string>
+    <string name="games_plus_one_maria">+1</string>
+    <string name="games_plus_one_maria_label">Game</string>
+    <string name="sets_plus_one_maria_label">Set</string>
+    <string name="sets_plus_one_maria">+1</string>
+    <string name="sets_plus_one_simona_label">Set</string>
+    <string name="sets_plus_one_simona">+1</string>
+    <string name="games_plus_one_simona_label">Game</string>
+    <string name="advantage">ADV</string>
+    <string name="name_player_a">Type Name</string>
+    <string name="surname_player_a">Type Surname</string>
+    <string name="name_player_b">Type Name</string>
+    <string name="surname_player_b">Type Surname</string>
+    <string name="Plus">+</string>
+
+
+</resources>

@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    style="@style/scrollView"
+    tools:context="com.example.android.tennisscorecounter2.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/LinearLayout1"
+        style="@style/LinearLayout1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            style="@style/LinearLayout1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                style="@style/LinearLayout2"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    style="@style/LinearLayout3"
+                    android:background="@drawable/graphic_amber">
+
+                    <ImageView
+                        android:id="@+id/player_a_image"
+                        style="@style/Photo"
+                        android:src="@drawable/sharapova_round1" />
+
+                    <EditText
+                        android:id="@+id/editNamePlayerA"
+                        style="@style/Name" />
+
+                    <EditText
+                        android:id="@+id/editSurnamePlayerA"
+                        style="@style/Surname" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/PointsGamesSetsA"
+                    android:layout_marginTop="@dimen/dim30"
+                    android:background="@color/colorAccent">
+
+                    <TextView
+                        android:id="@+id/points_player_a_label"
+                        style="@style/TextViewWeight"
+                        android:text="@string/points_sharapova_label"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_18" />
+
+                    <TextView
+                        android:id="@+id/points_player_a"
+                        style="@style/TextViewWeight"
+                        android:text="@string/points_sharapova"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_36" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/PointsGamesSetsA"
+                    android:background="@color/colorAccentLight">
+
+                    <TextView
+                        android:id="@+id/games_player_a_label"
+                        style="@style/TextViewWeight"
+                        android:text="@string/games_sharapova_label" />
+
+                    <TextView
+                        android:id="@+id/games_player_a"
+                        style="@style/TextViewWeight"
+                        android:text="@string/games_sharapova" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_layout_a"
+                    style="@style/PointsGamesSetsA"
+                    android:background="@color/colorAccentLight">
+
+                    <TextView
+                        android:id="@+id/sets_player_a_label"
+                        style="@style/TextViewWeight"
+                        android:text="@string/sets_sharapova_label" />
+
+                    <TextView
+                        android:id="@+id/sets_player_a"
+                        style="@style/TextViewWeight"
+                        android:text="@string/sets_sharapova" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    style="@style/RelativeLayout"
+                    android:layout_marginEnd="@dimen/dim8"
+                    android:layout_marginLeft="@dimen/activity_vertical_margin"
+                    android:layout_marginRight="@dimen/dim8"
+                    android:layout_marginStart="@dimen/activity_vertical_margin">
+
+                    <TextView
+                        android:id="@+id/serves_won_player_a"
+                        style="@style/PlusButtonLabel"
+                        android:paddingLeft="5dp"
+                        android:paddingStart="5dp"
+                        android:text="@string/serves_won_sharapova" />
+
+                    <Button
+                        android:id="@+id/player_a_plus_one"
+                        style="@style/PlusButton"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignTop="@+id/serves_won_player_a"
+                        android:layout_gravity="end"
+                        android:onClick="addOneForTeamA" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/LinearLayout2"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    style="@style/LinearLayout3"
+                    android:background="@drawable/graphic_amber">
+
+                    <ImageView
+                        android:id="@+id/player_b_image"
+                        style="@style/Photo"
+                        android:src="@drawable/halep_round" />
+
+                    <EditText
+                        android:id="@+id/editNamePlayerB"
+                        style="@style/Name" />
+
+                    <EditText
+                        android:id="@+id/editSurnamePlayerB"
+                        style="@style/Surname" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/PointsGamesSetsB"
+                    android:layout_marginTop="@dimen/dim30"
+                    android:background="@color/colorAccent">
+
+                    <TextView
+                        android:id="@+id/points_player_b"
+                        style="@style/TextViewWeight"
+                        android:text="@string/points_halep"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_36" />
+
+                    <TextView
+                        android:id="@+id/points_player_b_label"
+                        style="@style/TextViewWeight"
+                        android:text="@string/points_halep_label"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_18" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/PointsGamesSetsB"
+                    android:background="@color/colorAccentLight">
+
+                    <TextView
+                        android:id="@+id/games_player_b"
+                        style="@style/TextViewWeight"
+                        android:text="@string/games_halep" />
+
+                    <TextView
+                        android:id="@+id/games_player_b_label"
+                        style="@style/TextViewWeight"
+                        android:text="@string/games_halep_label" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/PointsGamesSetsB"
+                    android:background="@color/colorAccentLight">
+
+                    <TextView
+                        android:id="@+id/sets_player_b"
+                        style="@style/TextViewWeight"
+                        android:text="@string/sets_halep" />
+
+                    <TextView
+                        android:id="@+id/sets_player_b_label"
+                        style="@style/TextViewWeight"
+                        android:text="@string/sets_halep_label" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    style="@style/RelativeLayout"
+                    android:layout_marginEnd="@dimen/activity_vertical_margin"
+                    android:layout_marginLeft="@dimen/dim8"
+                    android:layout_marginRight="@dimen/activity_vertical_margin"
+                    android:layout_marginStart="@dimen/dim8">
+
+                    <Button
+                        android:id="@+id/player_b_plus_one"
+                        style="@style/PlusButton"
+                        android:onClick="addOneForTeamB" />
+
+                    <TextView
+                        android:id="@+id/serves_won_player_b"
+                        style="@style/PlusButtonLabel"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:paddingEnd="5dp"
+                        android:paddingRight="5dp"
+                        android:text="@string/serves_won_halep" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/winner"
+            style="@style/TheWinnerIs" />
+
+        <Button
+            android:id="@+id/reset_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:onClick="resetScore"
+            android:text="@string/reset_score"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+</ScrollView>
