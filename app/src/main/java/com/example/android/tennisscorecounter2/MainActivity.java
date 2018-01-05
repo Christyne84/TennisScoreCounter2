@@ -11,6 +11,20 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    //Default names of the players it they don't write their names and surnames
+    static final String defaultNameA = "Player";
+    static final String defaultSurnameA = "1";
+    static final String defaultNameB = "Player";
+    static final String defaultSurnameB = "2";
+    //State of the scores
+    static final String stateScoreTeamA = "GlobalScoreTeamA";
+    static final String stateScoreTeamB = "GlobalScoreTeamB";
+    static final String stateGamesTeamA = "GlobalGamesTeamA";
+    static final String stateGamesTeamB = "GlobalGamesTeamB";
+    static final String stateSetsTeamA = "GlobalSetsTeamA";
+    static final String stateSetsTeamB = "GlobalSetsTeamB";
+    static final String statePointsTeamA = "GlobalPointsTeamA";
+    static final String statePointsTeamB = "GlobalPointsTeamB";
     //Tracks the score from Team A/Player A and Team B/Player B
     int pointsToScore[] = {0, 15, 30, 40};
     int pointsTeamA = 0;
@@ -22,23 +36,6 @@ public class MainActivity extends AppCompatActivity {
     int setsTeamA = 0;
     int setsTeamB = 0;
     boolean gameFinished = false;
-
-    //Default names of the players it they don't write their names and surnames
-    static final String defaultNameA = "Player";
-    static final String defaultSurnameA = "1";
-    static final String defaultNameB = "Player";
-    static final String defaultSurnameB = "2";
-
-    //State of the scores
-    static final String stateScoreTeamA = "GlobalScoreTeamA";
-    static final String stateScoreTeamB = "GlobalScoreTeamB";
-    static final String stateGamesTeamA = "GlobalGamesTeamA";
-    static final String stateGamesTeamB = "GlobalGamesTeamB";
-    static final String stateSetsTeamA = "GlobalSetsTeamA";
-    static final String stateSetsTeamB = "GlobalSetsTeamB";
-    static final String statePointsTeamA = "GlobalPointsTeamA";
-    static final String statePointsTeamB = "GlobalPointsTeamB";
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,24 +79,23 @@ public class MainActivity extends AppCompatActivity {
      * Checks the scores against the length of the array pointsToScore[] = {0, 15, 30, 40}
      * to display the score, to display deuce (40-40) or to display advantage(ADV) in the POINTS TextView
      */
-    private void displayScore()
-    {
+    private void displayScore() {
         //pointsToScore.length = 4
         if(pointsTeamA < pointsToScore.length)
             displayScoreForTeamA(pointsToScore[pointsTeamA]);
         else if (pointsTeamA > pointsTeamB)
             displayAdvantageScoreTeamA();
         else
-            displayDeuce();
+            displayScoreForTeamA(40);
+
 
         if(pointsTeamB < pointsToScore.length)
             displayScoreForTeamB(pointsToScore[pointsTeamB]);
         else if (pointsTeamB > pointsTeamA)
             displayAdvantageScoreTeamB();
         else
-            displayDeuce();
+            displayScoreForTeamB(40);
     }
-
 
     /**
      * Save the user's current game state (scores, games, sets, points)
@@ -248,14 +244,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Displays "ADV" (advantage point) when it is deuce (the score 40-40).
-     */
-    public void displayDeuce(){
-        displayScoreForTeamA(40);
-        displayScoreForTeamB(40);
-    }
-
-    /**
      * Reset scores.
      */
     public void resetScore (View view){
@@ -335,7 +323,7 @@ public class MainActivity extends AppCompatActivity {
      * Displays advantage(ADV) for Team A/Player A.
      */
     public void displayAdvantageScoreTeamA() {
-        TextView advantageView = (TextView)findViewById(R.id.points_player_a);
+        TextView advantageView = findViewById(R.id.points_player_a);
         advantageView.setText(R.string.advantage);
     }
 
