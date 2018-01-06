@@ -123,7 +123,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Increase the sets for Team A/Player A by 1 point.
+     * Increase the score for Team A/Player A by 1 point when the + button is clicked.
+     * Checks if game is still on or it is finished, if it's still on, it increases the points
+     * of Team A/Player A by 1. Calculates the score difference between players. If the score of
+     * Team A/Player A is greater than 40 and the score of the Team B/Player B is at least 2 points
+     * smaller (max 30), the player A wins the game, and adds 1 game to the Games textView.
+     * Clears the number of points for both players to initial values 0 then displays the score.
      */
     public void addOneForTeamA (View view){
         if(gameFinished)
@@ -131,7 +136,7 @@ public class MainActivity extends AppCompatActivity {
 
         pointsTeamA = pointsTeamA + 1;
         int diff = pointsTeamA - pointsTeamB;
-        //TODO: explain 4 and 2 and the points-to-score logic
+
         if(pointsTeamA >= 4 && diff >= 2) {
             addGamesForTeamA();
 
@@ -145,7 +150,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Increase the score for Team B/Player B by 1 point.
+     * Increase the score for Team B/Player B by 1 point when the + button is clicked.
+     * Checks if game is still on or it is finished, if it's still on, it increases the points
+     * of Team B/Player B by 1. Calculates the score difference between players. If the score of
+     * Team B/Player B is greater than 40 and the score of the Team A/Player A is at least 2 points
+     * smaller (max 30), the player B wins the game, and adds 1 game to the Games textView.
+     * Sets the number of points for both players to initial values 0 then displays the score.
      */
     public void addOneForTeamB (View view){
         if(gameFinished)
@@ -153,7 +163,7 @@ public class MainActivity extends AppCompatActivity {
 
         pointsTeamB = pointsTeamB + 1;
         int diff = pointsTeamB - pointsTeamA;
-        //TODO: explain 4 and 2 and the points-to-score logic
+
         if(pointsTeamB >= 4 && diff >= 2) {
             addGamesForTeamB();
 
@@ -167,12 +177,16 @@ public class MainActivity extends AppCompatActivity {
 
 
     /**
-     * Increase the games for Team A by 1 point.
+     * Increase the number of games for Team A/Player A by 1.
+     * Calculates the difference between the number of games won by Team A/Player A and Team B/Player B.
+     * At 6 games won for Team A/Player A and at least 2 games difference from Team B/Player B, the
+     * Team A/Player A wins the a set and adds up 1 set to Team A/Player A.
+     * Sets the number of games for both players to initial values 0 then displays it.
      */
     public void addGamesForTeamA (){
         gamesTeamA = gamesTeamA + 1;
         int diff = gamesTeamA - gamesTeamB;
-        //TODO: explain 6 and 2 and the game logic
+
         if (gamesTeamA >= 6 && diff >= 2) {
             addSetsForTeamA();
             gamesTeamA = 0;
@@ -184,12 +198,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Increase the game for Team B by 1 point.
+     * Increase the number of games for Team B/Player B by 1.
+     * Calculates the difference between the number of games won by Team B/Player B and Team A/Player A.
+     * At 6 games won for Team B/Player B and at least 2 games difference from Team A/Player A, the
+     * Team B/Player B wins the a set and adds up 1 set to Team B/Player B.
+     * Sets the number of games for both players to initial values 0 then displays it.
      */
     public void addGamesForTeamB (){
         gamesTeamB = gamesTeamB + 1;
         int diff = gamesTeamB - gamesTeamA;
-        //TODO: explain 6 and 2 and the game logic
+
         if (gamesTeamB >= 6 && diff >=2) {
             addSetsForTeamB();
             gamesTeamA = 0;
@@ -203,13 +221,15 @@ public class MainActivity extends AppCompatActivity {
 
 
     /**
-     * Increase the sets for Team A by 1 point.
+     * Increase the number of sets for Team A/Player A by 1.
+     * If either Team A/Player A or Team B/Player B wins 2 sets, the match is over.
+     * Displays the winner in the Winner TextView.
+     * Displays a toast message in the center of the screen: "The game is over! Press Reset to start a new match"
      */
     public void addSetsForTeamA (){
         setsTeamA = setsTeamA + 1;
         displaySetsForTeamA(setsTeamA);
 
-        //TODO: explain "2" and the game logic
         if ( setsTeamA == 2 || setsTeamB == 2){
             gameFinished = true;
 
@@ -223,13 +243,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Increase the sets for Team B by 1 point.
+     * Increase the number of sets for Team B/Player B by 1.
+     * If either Team A/Player A or Team B/Player B wins 2 sets, the match is over.
+     * Displays the winner in the Winner TextView.
+     * Displays a toast message in the center of the screen: "The game is over! Press Reset to start a new match"
      */
     public void addSetsForTeamB (){
         setsTeamB = setsTeamB + 1;
         displaySetsForTeamB(setsTeamB);
 
-        //TODO: explain "2" and the game logic
         if ( setsTeamA == 2 || setsTeamB == 2){
             gameFinished = true;
 
@@ -244,7 +266,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Reset scores.
+     * Reset scores, games, sets, points and winner's name.
      */
     public void resetScore (View view){
         scoreTeamA = 0;
@@ -286,7 +308,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     /**
-     * Displays the games won for Team A/Player A.
+     * Displays the number of games won for Team A/Player A.
      */
     public void displayGamesForTeamA(int games) {
         TextView gamesView = findViewById(R.id.games_player_a);
@@ -294,7 +316,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Displays the games won for Team B/Player B.
+     * Displays the number of games won for Team B/Player B.
      */
     public void displayGamesForTeamB(int games) {
         TextView gamesView = findViewById(R.id.games_player_b);
@@ -302,7 +324,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Displays the sets won for Team A/Player A.
+     * Displays the number of sets won for Team A/Player A.
      */
     public void displaySetsForTeamA(int sets) {
         TextView setsView = findViewById(R.id.sets_player_a);
@@ -310,7 +332,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Displays the sets won for Team B/Player B.
+     * Displays the number of sets won for Team B/Player B.
      */
     public void displaySetsForTeamB(int sets) {
         TextView setsView = findViewById(R.id.sets_player_b);
@@ -320,7 +342,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     /**
-     * Displays advantage(ADV) for Team A/Player A.
+     * Displays advantage(ADV) point for Team A/Player A.
      */
     public void displayAdvantageScoreTeamA() {
         TextView advantageView = findViewById(R.id.points_player_a);
@@ -328,7 +350,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Displays advantage(ADV) for Team B/Player B.
+     * Displays advantage(ADV) point for Team B/Player B.
      */
     public void displayAdvantageScoreTeamB() {
         TextView advantageView = findViewById(R.id.points_player_b);
