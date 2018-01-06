@@ -43,6 +43,7 @@
     <string name="name_player_b">Type Name</string>
     <string name="surname_player_b">Type Surname</string>
     <string name="Plus">+</string>
+    <string name="toast">The game is over! Press Reset to start a new match</string>
 
 
 </resources>

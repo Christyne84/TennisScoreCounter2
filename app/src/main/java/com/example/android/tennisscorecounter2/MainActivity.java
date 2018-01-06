@@ -236,7 +236,7 @@ public class MainActivity extends AppCompatActivity {
             //the winner is: ""
             displayWinner();
 
-            Toast toastText = Toast.makeText(this, "The game is over!\nPress Reset to start a new match", Toast.LENGTH_LONG);
+            Toast toastText = Toast.makeText(this, R.string.toast, Toast.LENGTH_LONG);
             toastText.setGravity(Gravity.CENTER, 0, 0);
             toastText.show();
         }
@@ -258,7 +258,7 @@ public class MainActivity extends AppCompatActivity {
             //the winner is: ""
             displayWinner();
 
-            Toast toastText = Toast.makeText(this, "The game is over!\nPress Reset to start a new match", Toast.LENGTH_LONG);
+            Toast toastText = Toast.makeText(this, R.string.toast, Toast.LENGTH_LONG);
             toastText.setGravity(Gravity.CENTER, 0, 0);
             toastText.show();
 
