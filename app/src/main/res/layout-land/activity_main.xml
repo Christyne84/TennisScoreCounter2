@@ -29,11 +29,13 @@
 
                     <EditText
                         android:id="@+id/editNamePlayerA"
-                        style="@style/Name" />
+                        style="@style/Name"
+                        android:labelFor="@id/editNamePlayerA" />
 
                     <EditText
                         android:id="@+id/editSurnamePlayerA"
-                        style="@style/Surname" />
+                        style="@style/Surname"
+                        android:labelFor="@id/editSurnamePlayerA" />
 
                 </LinearLayout>
 
@@ -94,8 +96,6 @@
                 <RelativeLayout
                     style="@style/RelativeLayout"
                     android:layout_marginEnd="@dimen/dim8"
-                    android:layout_marginLeft="@dimen/activity_vertical_margin"
-                    android:layout_marginRight="@dimen/dim8"
                     android:layout_marginStart="@dimen/activity_vertical_margin">
 
                     <Button
@@ -129,11 +129,13 @@
 
                     <EditText
                         android:id="@+id/editNamePlayerB"
-                        style="@style/Name" />
+                        style="@style/Name"
+                        android:labelFor="@id/editNamePlayerB" />
 
                     <EditText
                         android:id="@+id/editSurnamePlayerB"
-                        style="@style/Surname" />
+                        style="@style/Surname"
+                        android:labelFor="@id/editSurnamePlayerB" />
 
                 </LinearLayout>
 
@@ -193,8 +195,6 @@
                 <RelativeLayout
                     style="@style/RelativeLayout"
                     android:layout_marginEnd="@dimen/activity_vertical_margin"
-                    android:layout_marginLeft="@dimen/dim8"
-                    android:layout_marginRight="@dimen/activity_vertical_margin"
                     android:layout_marginStart="@dimen/dim8">
 
                     <Button
@@ -223,6 +223,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/dim30"
             android:onClick="resetScore"
             android:text="@string/reset_score"
             android:textColor="@color/white" />
