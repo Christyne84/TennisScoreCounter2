@@ -10,10 +10,7 @@
         <item name="android:textSize">@dimen/text_size_16</item>
         <item name="android:textAllCaps">true</item>
         <item name="android:statusBarColor">#FFA000</item>
-
-
     </style>
-
 
     <style name="scrollView">
         <item name="android:layout_width">match_parent</item>
@@ -24,13 +21,10 @@
         <item name="android:focusableInTouchMode">true</item>
     </style>
 
-
     <style name="LinearLayout1">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-
     </style>
-
 
     <style name="LinearLayout2">
         <item name="android:layout_width">0dp</item>
@@ -42,7 +36,6 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">@dimen/dim180</item>
         <item name="android:orientation">vertical</item>
-
     </style>
 
     <style name="Photo">
@@ -50,7 +43,6 @@
         <item name="android:layout_height">@dimen/dim80</item>
         <item name="android:layout_marginBottom">@dimen/activity_vertical_margin</item>
         <item name="android:layout_marginTop">@dimen/activity_vertical_margin</item>
-
     </style>
 
     <style name="Name">
@@ -114,7 +106,6 @@
         <item name="android:layout_height">match_parent</item>
         <item name="android:layout_weight">1</item>
         <item name="android:gravity">center</item>
-
     </style>
 
     <style name="RelativeLayout">
@@ -125,8 +116,6 @@
         <item name="android:paddingRight">@dimen/dim20</item>
     </style>
 
-
-
     <style name="PlusButtonLabel">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
@@ -136,18 +125,12 @@
         <item name="android:paddingBottom">@dimen/activity_horizontal_margin</item>
     </style>
 
-
-
     <style name="PlusButton">
         <item name="android:layout_width">@dimen/dim48</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:background">@drawable/round_button_orange_shadow4</item>
         <item name="android:text">@string/Plus</item>
-
     </style>
-
-
-
 
     <style name="TheWinnerIs">
         <item name="android:layout_width">wrap_content</item>
@@ -155,6 +138,4 @@
         <item name="android:padding">@dimen/activity_vertical_margin</item>
         <item name="android:layout_gravity">center</item>
     </style>
-
-
 </resources>
